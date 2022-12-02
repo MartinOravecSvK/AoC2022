@@ -38,7 +38,29 @@ def main():
     print("Part one")
     print(results[0][1])
 
+    sub_part2 = {("A", "X"):"C",
+                 ("A", "Y"):"A",
+                 ("A", "Z"):"B",
+                 ("B", "X"):"A",
+                 ("B", "Y"):"B",
+                 ("B", "Z"):"C",
+                 ("C", "X"):"B",
+                 ("C", "Y"):"C",
+                 ("C", "Z"):"A",}
 
+    score_opp = 0
+    score_me = 0
+    for game in data:
+        opp = game[0]
+        me = sub_part2[(opp, game[2])]
+        round_opp, round_me = round((opp, me))
+        score_opp += round_opp
+        score_me += round_me
+    results.append((score_opp, score_me))
+    rel_results.append(score_me-score_opp)
+
+    print("Part two")
+    print(results[1][1])
 
 if __name__ == "__main__":
     main()
