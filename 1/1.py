@@ -28,8 +28,6 @@ def main():
     e = 0
     tmp = 0
 
-
-
     newData = []
     for c in range(0, len(data)):
         if (data[c] == "\n" or c == len(data)-1):
