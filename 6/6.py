@@ -15,7 +15,7 @@ def main():
         seq.append(ch)
         seq = seq[1:5]
         
-        a = seq.count(seq[0])+seq.count(seq[1])+seq.count(seq[2])+seq.count(seq[3])
+        a = sum([ seq.count(seq[i]) for i in range(0, len(seq)) ])
         if (a == 4):
             print("Part one:")
             print (c)
@@ -29,11 +29,8 @@ def main():
         c += 1
         seq.append(ch)
         seq = seq[1:15]
-        
-        a = 0
 
-        for i in range(0, len(seq)):
-            a += seq.count(seq[i])
+        a = sum([ seq.count(seq[i]) for i in range(0, len(seq)) ])
 
         if (a == 14):
             print("Part two:")
