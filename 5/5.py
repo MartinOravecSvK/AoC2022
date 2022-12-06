@@ -1,6 +1,5 @@
 import os
 import sys
-import re
 
 def main():
     file = open(os.path.join(sys.path[0], "input.txt"), "r")
