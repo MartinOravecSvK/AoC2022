@@ -27,7 +27,7 @@ def main():
         q = int(instruction[1])
         f = int(instruction[3])
         t = int(instruction[5])
-        for i in range(q):
+        for _ in range(q):
             stacks[t-1].append(stacks[f-1].pop())
 
     print("Part One:")

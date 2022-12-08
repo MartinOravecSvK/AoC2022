@@ -26,7 +26,7 @@ def main():
             directories['/'.join(currentD)].append(int(line[0]))
 
     closed = {}
-    for _ in range(16*len(directories.keys())):
+    for _ in range(len(directories.keys())):
         for key in directories:
             if (key in closed.keys()):
                 continue
