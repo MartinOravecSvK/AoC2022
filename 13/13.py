@@ -14,6 +14,7 @@ def listAppend(l):
         c += 1
     return [c, newList]
 
+# recursive comparison
 def cmp(cmp1, cmp2):
     if (type(cmp1) == int and type(cmp2) == int):
         if (cmp1 < cmp2):
